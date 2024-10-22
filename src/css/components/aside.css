@@ -1,0 +1,52 @@
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    right: -5.5rem;
+    min-height: 7rem;
+    min-width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+    translate: 0 -50%;
+    border-radius: 32px;
+    background-color: rgba(var(--color-bg), .6);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+    transform: translateX(0);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: 
+        transform var(--transition-duration), 
+        min-height var(--transition-duration),
+}
+
+.floating-menu.active {
+    transform: translateX(-100%);
+    min-height: 10rem;
+}
+
+.floating-menu.active .icon {
+    rotate: 0deg;
+}
+
+.floating-menu .icon {
+    position: absolute;
+    left: -3.5rem;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    margin-top: 0;
+    background-color: rgba(var(--color-bg), .6);
+    border-radius: 50%;
+    cursor: pointer;
+    rotate: 180deg;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    transition: 
+        rotate var(--transition-duration),
+        filter var(--transition-duration);
+}
+
+.floating-menu > * {
+    margin-top: .5rem;
+}

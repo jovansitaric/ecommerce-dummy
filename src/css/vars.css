@@ -1,0 +1,23 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --transition-duration: 400ms;
+}
+
+[data-theme="light"] {
+    --color-bg: 204, 204, 204;
+    --color-fg: 33, 53, 71;
+    --color-translucent-bg-one: 199, 199, 199;
+    --color-translucent-fg-one: 99, 99, 99;
+    --color-error: 176, 12, 18;
+    --color-link: 36, 43, 172;
+}
+
+[data-theme="dark"] {
+    --color-bg: 33, 53, 71;
+    --color-fg: 204, 204, 204;
+    --color-translucent-bg-one: 99, 99, 99;
+    --color-translucent-fg-one: 199, 199, 199;
+    --color-error: 255, 195, 64;
+    --color-link: 204, 204, 204;
+}

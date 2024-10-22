@@ -1,0 +1,92 @@
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 5rem;
+    padding: 0 2rem;
+    margin-bottom: auto;
+    border-radius: 32px;
+    background-color: rgba(var(--color-bg), .6);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.navbar .logo {
+    width: 3rem;
+    max-height: 3rem;
+    object-fit: contain;
+}
+
+.navbar > button {
+    background-color: rgba(var(--color-bg), .6);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    max-height: 0;
+    width: 6.5rem;
+    border-radius: 32px;
+    background-color: rgba(var(--color-bg), .6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    transform-origin: top;
+    transition: width var(--transition-duration), max-height var(--transition-duration);
+}
+
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--color-bg), .6);
+    z-index: -1;
+}
+
+.dropdown-menu.active {
+    max-height: 15rem;
+    width: 9rem;
+}
+
+.dropdown-menu-list {
+    padding: 1rem;
+}
+
+.dropdown-menu-list > *:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.avatar-button {
+    padding: .3rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.pagination {
+    position: relative;
+}
+
+.pagination > .icon {
+    background-color: rgba(var(--color-bg), .6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}

@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: rgb(var(--color-fg));
+  text-decoration: inherit;
+  transition: filter var(--transition-duration);
+}
+a:hover {
+  filter: brightness(0.8);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: filter var(--transition-duration);
+}
+button:hover {
+  filter: brightness(0.8);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.full-image {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(var(--color-bg), .4), rgba(var(--color-bg), .4));
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+}
+
+.card {
+  @apply relative max-w-sm rounded-lg shadow dark:bg-gray-800 dark:border-gray-700;
+  height: 100%;
+  background-color: rgba(var(--color-bg), .6);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.card .price {
+  font-size: 1.6rem;
+  color: rgb(var(--color-error), .8);
+}
+
+.plp-back span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.plp-back {
+  background-color: rgba(var(--color-bg), .6);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.plp-back .icon-arrow-right {
+  rotate: 180deg;
+}
+
+.profile {
+  @apply overflow-hidden shadow rounded-lg mt-8;
+  padding: 1rem 3rem;
+  background-color: rgba(var(--color-bg), .6);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.search-field input {
+  border-radius: 32px;
+  padding: 1rem 2rem;
+  color: var(--color-fg);
+  background-color: rgba(var(--color-bg), .6);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.search-field input::placeholder {
+  color: var(--color-fg);
+}
